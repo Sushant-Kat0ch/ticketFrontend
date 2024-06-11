@@ -1,0 +1,38 @@
+<app-filter></app-filter>
+   
+    <table>
+        <thead>
+            <tr>
+                <th class="p-3">Ticket Name</th>
+                <th class="p-3">Created  Date</th>
+                <th class="p-3">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (tickets) {
+                @for (ticket of tickets; track $index) {
+    
+                    <tr>
+                        <td class="p-3">
+                            {{ticket.ticketName}}
+                        </td>
+                        <td class="p-3">
+                            {{ticket.date }}
+                        </td>
+                        <td class="p-3">
+                            <button (click)="openUpdateDialog('0ms', '0ms', ticket)">Edit</button>
+                            <button (click)="openDialogDelete('0ms', '0ms',ticket)" class="ms-3">Delete</button>
+                        </td>
+                    </tr>
+                }
+            }
+            @else {
+               <tr>
+                <td>
+                    No data found
+                </td>
+                
+               </tr> 
+            }
+        </tbody>
+    </table>

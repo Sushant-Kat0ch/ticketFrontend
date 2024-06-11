@@ -1,0 +1,16 @@
+button {
+    background: #0dbef0;
+    border: 2px solid #0dbef0;
+    color: #fff;
+    transition: .5s all;
+}
+button:hover {
+    background: transparent;
+    transition: .5s all;
+    color: #0dbef0;
+}
+button.no-btn {
+    background: transparent;
+    border: 2px solid #959494;
+    color: black;
+}
