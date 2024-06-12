@@ -33,7 +33,7 @@ export class ListingComponent {
     this.ticketService.ticketsData.subscribe(
       (data:any) => {
         this.tickets = data
-        console.log('recived tickets', data)
+        console.log('recived tickets', this.tickets)
       }
     )
   }

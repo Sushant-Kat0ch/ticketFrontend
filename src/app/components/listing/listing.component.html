@@ -8,8 +8,9 @@
                 <th class="p-3">Delete</th>
             </tr>
         </thead>
-        <tbody>
-            @if (tickets) {
+        
+            @if (tickets && tickets.length > 1) {
+                <tbody>
                 @for (ticket of tickets; track $index) {
     
                     <tr>
@@ -25,14 +26,13 @@
                         </td>
                     </tr>
                 }
+            </tbody>
             }
             @else {
-               <tr>
-                <td>
-                    No data found
-                </td>
                 
-               </tr> 
+                <tr class="p-3">
+                    <td colspan="4" class="text-center p-4">No data found</td>
+                </tr>
             }
-        </tbody>
+       
     </table>
